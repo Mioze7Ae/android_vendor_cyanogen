@@ -16,6 +16,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/cyanogen_sholes.mk \
     $(LOCAL_DIR)/cyanogen_supersonic.mk \
     $(LOCAL_DIR)/cyanogen_umts_sholes.mk \
+    $(LOCAL_DIR)/cyanogen_sholest.mk \
     $(LOCAL_DIR)/cyanogen_vibrant.mk \
     $(LOCAL_DIR)/cyanogen_vision.mk \
     $(LOCAL_DIR)/cyanogen_z71.mk

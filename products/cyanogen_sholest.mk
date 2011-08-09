@@ -1,5 +1,5 @@
 # Inherit AOSP device configuration for passion.
-$(call inherit-product, device/motorola/umts_sholes/umts_sholes.mk)
+$(call inherit-product, device/motorola/sholest/sholest.mk)
 
 # Inherit some common cyanogenmod stuff.
 $(call inherit-product, vendor/cyanogen/products/common.mk)
@@ -17,10 +17,10 @@ PRODUCT_PACKAGES += Torch
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cyanogen_umts_sholes
+PRODUCT_NAME := cyanogen_sholest
 PRODUCT_BRAND := motorola
-PRODUCT_DEVICE := umts_sholes
-PRODUCT_MODEL := Milestone
+PRODUCT_DEVICE := sholest
+PRODUCT_MODEL := MilestoneXT720
 PRODUCT_MANUFACTURER := Motorola
 
 #
@@ -28,10 +28,10 @@ PRODUCT_MANUFACTURER := Motorola
 #
 ifdef CYANOGEN_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-Milestone
+        ro.modversion=CyanogenMod-6-$(shell date +%m%d%Y)-NIGHTLY-MilestoneXT720
 else
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-6.1.2-0.10-$(shell date +%y.%m.%d)-Milestone
+        ro.modversion=CyanogenMod-6.1.2-0.10-$(shell date +%y.%m.%d)-MilestoneXT720
 endif
 
 PRODUCT_BUILD_PROP_OVERRIDES := BUILD_ID=R.U.R.1920 BUILD_DISPLAY_ID=R.U.R.1920 PRODUCT_NAME=umts_sholes TARGET_DEVICE=umts_sholes BUILD_FINGERPRINT=MOTO_RTEU/umts_sholes/umts_sholes/sholes:2.2.1/SHOLS_U2_05.26.3/296482885:user/release-keys PRODUCT_BRAND=MOTO_RTEU PRIVATE_BUILD_DESC="umts_sholes-user 2.2.1 SHOLS_U2_05.26.3 296482885 release-keys" BUILD_NUMBER=296482885 BUILD_UTC_DATE=1295422848 TARGET_BUILD_TYPE=user BUILD_VERSION_TAGS=release-keys USER=android-build
@@ -43,6 +43,6 @@ WITH_WINDOWS_MEDIA := true
 
 PRODUCT_COPY_FILES +=  \
     vendor/cyanogen/prebuilt/hdpi/media/bootanimation.zip:system/media/bootanimation.zip \
-    vendor/cyanogen/prebuilt/umts_sholes/versionBeacon:system/versionBeacon
+    vendor/cyanogen/prebuilt/sholest/versionBeacon:system/versionBeacon
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/umts_sholes
+PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/sholest
